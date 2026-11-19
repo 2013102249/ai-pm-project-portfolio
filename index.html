@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 产品经理作品集 · 数字化平台项目集</title>
+<meta name="description" content="数字化平台项目作品集：覆盖医疗检验、医药流通、新能源、水利水务四大行业，每个项目含可点击 Demo 与完整交付物。">
+<style>
+:root{
+  --purple:#7C3AED;
+  --purple-deep:#5B21B6;
+  --blue:#2563EB;
+  --ink:#1E293B;
+  --ink-2:#475569;
+  --ink-3:#64748B;
+  --bg:#F6F7FB;
+  --card:#FFFFFF;
+  --line:#E7E9F2;
+  --radius:18px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei","Segoe UI",sans-serif;
+  background:var(--bg);color:var(--ink);
+  -webkit-font-smoothing:antialiased;
+  line-height:1.6;
+}
+
+/* ---------- HERO ---------- */
+.hero{
+  position:relative;
+  background:radial-gradient(1100px 520px at 15% -10%,rgba(124,58,237,.55),transparent 60%),
+             radial-gradient(900px 480px at 85% 0%,rgba(37,99,235,.45),transparent 55%),
+             linear-gradient(135deg,#1E1B4B 0%,#312E81 55%,#1E3A8A 100%);
+  color:#fff;
+  padding:72px 24px 88px;
+  overflow:hidden;
+}
+.hero::before{
+  content:"";position:absolute;inset:0;
+  background-image:linear-gradient(rgba(255,255,255,.06) 1px,transparent 1px),
+                   linear-gradient(90deg,rgba(255,255,255,.06) 1px,transparent 1px);
+  background-size:44px 44px;
+  mask-image:radial-gradient(ellipse 80% 70% at 50% 20%,#000 30%,transparent 75%);
+  -webkit-mask-image:radial-gradient(ellipse 80% 70% at 50% 20%,#000 30%,transparent 75%);
+}
+.hero-inner{position:relative;max-width:1120px;margin:0 auto}
+.hero .kicker{
+  display:inline-flex;align-items:center;gap:10px;
+  font-size:13px;letter-spacing:.22em;text-transform:uppercase;
+  color:#C4B5FD;
+  border:1px solid rgba(196,181,253,.35);
+  padding:7px 16px;border-radius:999px;
+  background:rgba(124,58,237,.16);
+}
+.hero .kicker::before{content:"";width:7px;height:7px;border-radius:50%;background:#A78BFA;box-shadow:0 0 10px #A78BFA}
+.hero h1{
+  margin:22px 0 14px;
+  font-size:clamp(30px,5.2vw,52px);
+  font-weight:800;letter-spacing:.01em;line-height:1.22;
+}
+.hero h1 .grad{
+  background:linear-gradient(100deg,#C4B5FD 10%,#93C5FD 60%,#67E8F9 100%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.hero p.sub{
+  max-width:720px;color:#D9D6F2;font-size:clamp(14px,1.7vw,17px);
+}
+.hero p.sub b{color:#fff;font-weight:600}
+.hero-stats{
+  margin-top:40px;
+  display:grid;grid-template-columns:repeat(4,1fr);gap:14px;
+}
+.stat{
+  background:rgba(255,255,255,.07);
+  border:1px solid rgba(255,255,255,.14);
+  border-radius:14px;
+  padding:18px 16px 15px;
+  backdrop-filter:blur(6px);
+}
+.stat .num{
+  font-size:clamp(26px,3.4vw,36px);font-weight:800;line-height:1.1;
+  background:linear-gradient(100deg,#DDD6FE,#BFDBFE);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  font-variant-numeric:tabular-nums;
+}
+.stat .label{margin-top:5px;font-size:12.5px;color:#C7C4E6;letter-spacing:.05em}
+
+/* ---------- SECTION ---------- */
+section.block{max-width:1120px;margin:0 auto;padding:58px 24px 8px}
+.sec-head{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:26px}
+.sec-head h2{font-size:clamp(21px,2.6vw,27px);font-weight:800;letter-spacing:.01em}
+.sec-head .en{font-size:12px;letter-spacing:.2em;color:var(--ink-3);text-transform:uppercase}
+.sec-head .line{flex:1;height:1px;background:linear-gradient(90deg,var(--line),transparent);min-width:60px}
+
+/* ---------- PROJECT CARDS ---------- */
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+@media (max-width:840px){.grid{grid-template-columns:1fr}}
+.card{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:26px 26px 24px;position:relative;overflow:hidden;
+  transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease;
+  display:flex;flex-direction:column;
+}
+.card:hover{transform:translateY(-4px);box-shadow:0 18px 40px -18px rgba(91,33,182,.28);border-color:#D6C7FA}
+.card::before{
+  content:"";position:absolute;top:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,var(--c1,#7C3AED),var(--c2,#2563EB));
+}
+.card-top{display:flex;align-items:center;gap:14px;margin-bottom:14px}
+.icon{
+  width:48px;height:48px;border-radius:13px;flex:none;
+  display:flex;align-items:center;justify-content:center;font-size:24px;
+  background:linear-gradient(135deg,var(--c1,#7C3AED),var(--c2,#2563EB));
+  box-shadow:0 8px 18px -8px var(--c1,#7C3AED);
+}
+.card-top h3{font-size:18.5px;font-weight:800;line-height:1.3}
+.card-top .industry{
+  display:inline-block;margin-top:3px;font-size:11.5px;letter-spacing:.08em;
+  color:var(--c1,#7C3AED);font-weight:600;
+}
+.card p.desc{color:var(--ink-2);font-size:14px;min-height:66px}
+.chips{display:flex;flex-wrap:wrap;gap:7px;margin:14px 0 16px}
+.chip{
+  font-size:12px;color:var(--ink-2);
+  background:#F4F1FC;border:1px solid #E9E3FA;
+  padding:4px 11px;border-radius:999px;
+}
+.metrics{
+  margin-top:auto;
+  display:flex;flex-wrap:wrap;gap:8px 0;
+  border-top:1px dashed var(--line);
+  padding-top:14px;margin-bottom:16px;
+}
+.metrics .m{
+  flex:1 1 33%;text-align:center;padding:2px 6px;
+}
+.metrics .m+.m{border-left:1px solid var(--line)}
+.metrics .mv{font-size:19px;font-weight:800;color:var(--c1,#7C3AED);font-variant-numeric:tabular-nums}
+.metrics .mk{font-size:11.5px;color:var(--ink-3);margin-top:1px}
+.actions{display:flex;gap:10px;flex-wrap:wrap}
+.btn{
+  display:inline-flex;align-items:center;gap:7px;
+  font-size:13.5px;font-weight:600;text-decoration:none;
+  padding:9px 18px;border-radius:10px;transition:.2s;
+}
+.btn-main{color:#fff;background:linear-gradient(100deg,var(--c1,#7C3AED),var(--c2,#2563EB));box-shadow:0 8px 18px -8px var(--c1,#7C3AED)}
+.btn-main:hover{filter:brightness(1.08);transform:translateY(-1px)}
+.btn-ghost{color:var(--c1,#7C3AED);border:1.5px solid var(--c1,#7C3AED);background:transparent}
+.btn-ghost:hover{background:rgba(124,58,237,.06)}
+
+/* ---------- METHOD ---------- */
+.method{
+  max-width:1120px;margin:0 auto;padding:26px 24px 10px;
+}
+.method-box{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:30px 28px;
+}
+.flow{display:flex;gap:0;flex-wrap:wrap}
+.step{
+  flex:1 1 150px;min-width:150px;position:relative;
+  padding:14px 16px 14px 16px;margin-bottom:10px;
+}
+.step .no{
+  font-size:11px;font-weight:800;letter-spacing:.12em;color:var(--purple);
+  background:#F4F1FC;border-radius:999px;display:inline-block;padding:3px 10px;
+}
+.step .t{font-weight:700;font-size:14.5px;margin-top:7px}
+.step .e{font-size:11.5px;color:var(--ink-3);letter-spacing:.04em}
+.flow .arrow{
+  align-self:center;color:#C4B5FD;font-size:18px;flex:none;padding:0 2px;
+}
+@media (max-width:840px){
+  .flow{flex-direction:column}
+  .flow .arrow{transform:rotate(90deg);align-self:flex-start;padding-left:18px}
+}
+.evidence{
+  margin-top:22px;border-top:1px dashed var(--line);padding-top:20px;
+}
+.evidence .cap{font-size:13px;font-weight:700;color:var(--ink-2);margin-bottom:12px}
+.ev-row{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+@media (max-width:640px){.ev-row{grid-template-columns:repeat(2,1fr)}}
+.ev{background:#FAFAFE;border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+.ev .dot{width:9px;height:9px;border-radius:50%;display:inline-block;margin-right:7px}
+.ev b{font-size:13.5px}
+.ev span{display:block;font-size:12px;color:var(--ink-3);margin-top:3px}
+
+/* ---------- FOOTER ---------- */
+footer{
+  text-align:center;color:var(--ink-3);font-size:12.5px;
+  padding:46px 24px 42px;
+}
+footer .f-line{max-width:280px;height:1px;background:linear-gradient(90deg,transparent,#D6C7FA,transparent);margin:0 auto 18px}
+@media (max-width:640px){
+  .hero{padding:54px 20px 66px}
+  .hero-stats{grid-template-columns:repeat(2,1fr)}
+  .card{padding:22px 20px}
+  .card p.desc{min-height:0}
+  .metrics .m{flex:1 1 33%}
+}
+</style>
+</head>
+<body>
+
+<!-- ================= HERO ================= -->
+<header class="hero">
+  <div class="hero-inner">
+    <span class="kicker">AI PRODUCT MANAGER · PORTFOLIO</span>
+    <h1>数字化平台<br><span class="grad">项目作品集</span></h1>
+    <p class="sub">覆盖<b>医疗检验、医药流通、新能源、水利水务</b>四大行业的数字化平台设计——每个项目均包含<b>可点击交互 Demo</b> 与完整交付物（概览 · 设计文档 · PRD · 方案图 · 评测方案）。</p>
+    <div class="hero-stats">
+      <div class="stat"><div class="num">4</div><div class="label">行业平台项目</div></div>
+      <div class="stat"><div class="num">24</div><div class="label">功能模块设计</div></div>
+      <div class="stat"><div class="num">20</div><div class="label">交付文档章节</div></div>
+      <div class="stat"><div class="num">4 / 4</div><div class="label">Demo 全部可点击</div></div>
+    </div>
+  </div>
+</header>
+
+<!-- ================= PROJECTS ================= -->
+<section class="block">
+  <div class="sec-head">
+    <h2>项目一览</h2><span class="en">Projects</span><span class="line"></span>
+  </div>
+
+  <div class="grid">
+
+    <!-- 1. 智检 LIS -->
+    <article class="card" style="--c1:#7C3AED;--c2:#2563EB">
+      <div class="card-top">
+        <div class="icon">🧪</div>
+        <div>
+          <h3>智检 LIS · 实验室信息化管理平台</h3>
+          <span class="industry">医疗检验 · Laboratory Information System</span>
+        </div>
+      </div>
+      <p class="desc">面向医学实验室的多角色协同 LIS 系统，覆盖样本从采集、流转、检验到报告发布的全生命周期，以 L-J 质控图保障检验结果可信。</p>
+      <div class="chips">
+        <span class="chip">样本全生命周期</span><span class="chip">检验流程</span><span class="chip">质控管理</span><span class="chip">设备对接</span><span class="chip">报告管理</span>
+      </div>
+      <div class="metrics">
+        <div class="m"><div class="mv">4</div><div class="mk">业务角色</div></div>
+        <div class="m"><div class="mv">6</div><div class="mk">功能模块</div></div>
+        <div class="m"><div class="mv">40</div><div class="mk">演示样本 · L-J 质控图</div></div>
+      </div>
+      <div class="actions">
+        <a class="btn btn-main" href="https://2013102249.github.io/lab-lis-portfolio/demo/index.html" target="_blank" rel="noopener">▶ 打开 Demo</a>
+        <a class="btn btn-ghost" href="https://2013102249.github.io/lab-lis-portfolio/" target="_blank" rel="noopener">作品集主页</a>
+      </div>
+    </article>
+
+    <!-- 2. 医药供应 -->
+    <article class="card" style="--c1:#2563EB;--c2:#0891B2">
+      <div class="card-top">
+        <div class="icon">💊</div>
+        <div>
+          <h3>医药供应数字化平台</h3>
+          <span class="industry">医药流通 · Digital Supply Platform</span>
+        </div>
+      </div>
+      <p class="desc">面向医药供应企业的一体化运营平台，打通商品、订单、售后全链路，配套权限体系与操作日志支撑合规追溯，全站适配手机端。</p>
+      <div class="chips">
+        <span class="chip">商品管理</span><span class="chip">订单管理</span><span class="chip">售后管理</span><span class="chip">权限体系</span><span class="chip">操作日志</span>
+      </div>
+      <div class="metrics">
+        <div class="m"><div class="mv">5</div><div class="mk">核心模块</div></div>
+        <div class="m"><div class="mv">3</div><div class="mk">全链路环节</div></div>
+        <div class="m"><div class="mv">100%</div><div class="mk">手机端适配</div></div>
+      </div>
+      <div class="actions">
+        <a class="btn btn-main" href="https://2013102249.github.io/medsupply-demo/" target="_blank" rel="noopener">▶ 打开 Demo</a>
+        <a class="btn btn-ghost" href="https://2013102249.github.io/ai-pm-portfolio-medsupply/" target="_blank" rel="noopener">作品集主页</a>
+      </div>
+    </article>
+
+    <!-- 3. 新能源运维 -->
+    <article class="card" style="--c1:#7C3AED;--c2:#DB2777">
+      <div class="card-top">
+        <div class="icon">⚡</div>
+        <div>
+          <h3>安和节能 · 新能源智能运维平台</h3>
+          <span class="industry">新能源 · Intelligent O&amp;M Platform</span>
+        </div>
+      </div>
+      <p class="desc">面向新能源电站集控场景的智能运维平台 V1.0，以全景可视化大屏为中枢，七大模块全交互，数据链路 5 秒刷新支撑集控值班决策。</p>
+      <div class="chips">
+        <span class="chip">全景可视化大屏</span><span class="chip">全局总览</span><span class="chip">七大模块全交互</span><span class="chip">告警通知</span><span class="chip">轮播巡览</span>
+      </div>
+      <div class="metrics">
+        <div class="m"><div class="mv">7</div><div class="mk">运维模块</div></div>
+        <div class="m"><div class="mv">5s</div><div class="mk">数据链路刷新</div></div>
+        <div class="m"><div class="mv">V1.0</div><div class="mk">平台版本</div></div>
+      </div>
+      <div class="actions">
+        <a class="btn btn-main" href="https://2013102249.github.io/anhe-energy-oms/" target="_blank" rel="noopener">▶ 打开 Demo</a>
+        <a class="btn btn-ghost" href="https://2013102249.github.io/ai-pm-portfolio/" target="_blank" rel="noopener">作品集主页</a>
+      </div>
+    </article>
+
+    <!-- 4. 智慧水利 -->
+    <article class="card" style="--c1:#2563EB;--c2:#0EA5E9">
+      <div class="card-top">
+        <div class="icon">💧</div>
+        <div>
+          <h3>智慧水利数字孪生平台</h3>
+          <span class="industry">水利水务 · Digital Twin Platform V2.1</span>
+        </div>
+      </div>
+      <p class="desc">面向水利管理部门的数字孪生平台，以「一张图」承载雨情、水情、工情实时监测与模型仿真预演，支撑防汛预警与水资源调度决策。</p>
+      <div class="chips">
+        <span class="chip">孪生一张图</span><span class="chip">物联感知监测</span><span class="chip">模型仿真预演</span><span class="chip">防汛 · 水资源 · 供水 · 灌区</span><span class="chip">工程运维</span>
+      </div>
+      <div class="metrics">
+        <div class="m"><div class="mv">6</div><div class="mk">业务板块</div></div>
+        <div class="m"><div class="mv">三级</div><div class="mk">等保 2.0 安全</div></div>
+        <div class="m"><div class="mv">V2.1</div><div class="mk">平台版本</div></div>
+      </div>
+      <div class="actions">
+        <a class="btn btn-main" href="https://2013102249.github.io/smart-water-platform/" target="_blank" rel="noopener">▶ 打开 Demo</a>
+        <a class="btn btn-ghost" href="https://2013102249.github.io/smart-water-portfolio/" target="_blank" rel="noopener">作品集主页</a>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- ================= METHOD ================= -->
+<section class="method">
+  <div class="method-box">
+    <div class="sec-head" style="margin-bottom:18px">
+      <h2>统一交付结构</h2><span class="en">Delivery Framework</span><span class="line"></span>
+    </div>
+    <div class="flow">
+      <div class="step"><span class="no">01</span><div class="t">项目概览</div><div class="e">Overview &amp; Self-check</div></div>
+      <div class="arrow">→</div>
+      <div class="step"><span class="no">02</span><div class="t">作品设计文档</div><div class="e">Design Doc</div></div>
+      <div class="arrow">→</div>
+      <div class="step"><span class="no">03</span><div class="t">可审阅 PRD</div><div class="e">PRD</div></div>
+      <div class="arrow">→</div>
+      <div class="step"><span class="no">04</span><div class="t">综合方案图</div><div class="e">Solution Map</div></div>
+      <div class="arrow">→</div>
+      <div class="step"><span class="no">05</span><div class="t">评测方案</div><div class="e">Evaluation</div></div>
+    </div>
+    <div class="evidence">
+      <div class="cap">每个项目内置 4 级证据分级标注，区分数据可信度</div>
+      <div class="ev-row">
+        <div class="ev"><b><span class="dot" style="background:#16A34A"></span>真实</b><span>有数据 / 日志支撑</span></div>
+        <div class="ev"><b><span class="dot" style="background:#2563EB"></span>仿真</b><span>样例集跑分验证</span></div>
+        <div class="ev"><b><span class="dot" style="background:#D97706"></span>估算</b><span>行业基准推算</span></div>
+        <div class="ev"><b><span class="dot" style="background:#94A3B8"></span>假设</b><span>待确认标注</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="f-line"></div>
+  数字化平台项目作品集 · 单文件页面 · 可离线打开 · Demo 与作品集同源部署
+</footer>
+
+</body>
+</html>
